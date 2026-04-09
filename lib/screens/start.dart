@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/components/base/base_button.dart';
 import 'package:flutter_application_1/screens/home.dart';
 
 class Start extends StatelessWidget {
@@ -18,10 +19,9 @@ class Start extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OutlinedButton.icon(
-      onPressed: () => onPressHomeButton(context),
-      icon: const Icon(Icons.home),
-      label: const Text('Go to home'),
+    return BaseButton(
+      text: 'Go to home',
+      onTap: () => onPressHomeButton(context),
     );
   }
 }

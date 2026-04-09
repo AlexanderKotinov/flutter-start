@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/components/base/base_button.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -16,11 +17,9 @@ class Home extends StatelessWidget {
           children: [
             const Text('Home Screen', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
             const SizedBox(height: 32),
-
-            OutlinedButton.icon(
-              onPressed: onPressBackButton,
-              icon: const Icon(Icons.arrow_back),
-              label: const Text('Go to Start'),
+            BaseButton(
+              text: 'Go to Start',
+              onTap: onPressBackButton,
             ),
           ],
         ),
